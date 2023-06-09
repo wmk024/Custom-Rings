@@ -2,15 +2,12 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, Center } from '@react-three/drei';
 import { OrbitControls } from '@react-three/drei';
 import Mesh from './Mesh';
-import PropTypes from 'prop-types';
 
-const CanvasModel = ({rota}) => {
-
-
+const CanvasModel = () => {
   const meshDatas = 
     {
       id:"2",
-      mesh_Url:"https://ik.imagekit.io/UniqJewlery/3DMeshes/CustWedRing_1/1.glb?updatedAt=1686295525200",
+      mesh_Url:"https://ik.imagekit.io/UniqJewlery/3DMeshes/CustWedRing_1/3.glb?updatedAt=1686300017874",
       type:"Ring",
       diamondScale:0.9,
       scale:0.2, 
@@ -21,12 +18,16 @@ const CanvasModel = ({rota}) => {
   const meshDatas2 = 
     {
       id:"2",
-      mesh_Url:"https://ik.imagekit.io/UniqJewlery/3DMeshes/CustWedRing_1/2.glb?updatedAt=1686295525220",
+      mesh_Url:"https://ik.imagekit.io/UniqJewlery/3DMeshes/CustWedRing_1/4.glb?updatedAt=1686300253527",
       type:"Ring",
       diamondScale:0.9,
       scale:0.2, 
       position:3.3,
-      positionD:5.5,
+      positionD:5.2,
+    }
+  const meshD = 
+    {
+      mesh_Url:"https://ik.imagekit.io/UniqJewlery/3DMeshes/CustWedRing_1/D.glb?updatedAt=1686300380273",
     }
 
   return (
@@ -55,21 +56,17 @@ const CanvasModel = ({rota}) => {
             position={[-0.6,-0.2,0]}
             rotation={[1.6,0,0]}
           >
-            <Mesh meshDatas={meshDatas} /> 
-            {/* <Mesh meshDatas={meshDatas2} />  */}
+            <Mesh meshDatas={meshDatas} meshD={meshD}/> 
           </Center>
           <Center 
-            scale={0.5}
+            scale={0.55}
             position={[1,0,0]}
             rotation={[1.6,-0.4,0]}
           >
-            <Mesh meshDatas={meshDatas2} /> 
+            <Mesh meshDatas={meshDatas2} meshD={meshD}/> 
           </Center>
     </Canvas>
   )
-}
-CanvasModel.propTypes = {
-  rota: PropTypes.bool,
 }
 
 export default CanvasModel

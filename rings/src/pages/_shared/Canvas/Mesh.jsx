@@ -9,7 +9,7 @@ import {
 } from '@react-three/drei'
 
 
-const Mesh = ({meshDatas}) => {
+const Mesh = ({meshDatas, meshD}) => {
   const texture = useCubeTexture(
     [
       "https://ik.imagekit.io/UniqJewlery/3DMeshes/diamond_Env/px.png?updatedAt=1685801642944",
@@ -24,7 +24,9 @@ const Mesh = ({meshDatas}) => {
     }
   )
   const mesh = useGLTF(meshDatas.mesh_Url)
+  const meshDi = useGLTF(meshD.mesh_Url)
   const nodes = mesh.nodes
+  const nodesD = meshDi.nodes
   const RedMat = new THREE.MeshStandardMaterial({ 
     color: new THREE.Color( "#f5ac84"),
     emissive: new THREE.Color("#242405"),
@@ -42,7 +44,7 @@ const Mesh = ({meshDatas}) => {
       />
 
       <mesh
-        geometry={nodes.RingD.geometry}
+        geometry={nodesD.RingD.geometry}
         scale={meshDatas.diamondScale}
         position-y={meshDatas.positionD}
       >
