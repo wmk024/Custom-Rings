@@ -26,7 +26,7 @@ const CanvasModel = ({rota}) => {
       diamondScale:0.9,
       scale:0.2, 
       position:3.3,
-      positionD:5.2,
+      positionD:5.5,
     }
 
   return (
@@ -45,22 +45,22 @@ const CanvasModel = ({rota}) => {
         />
         <Environment preset='city'/>
          <OrbitControls
-           enableZoom={true}
+           enableZoom={false}
            rotateSpeed={0.5}
            autoRotate={false}
-           autoRotateSpeed={2.5}
+           autoRotateSpeed={1.5}
          />
           <Center 
-            scale={0.75}
-            position={[0,-0.6,0]}
+            scale={0.55}
+            position={[-0.6,-0.2,0]}
             rotation={[1.6,0,0]}
           >
             <Mesh meshDatas={meshDatas} /> 
             {/* <Mesh meshDatas={meshDatas2} />  */}
           </Center>
           <Center 
-            scale={0.65}
-            position={[1.5,0,0]}
+            scale={0.5}
+            position={[1,0,0]}
             rotation={[1.6,-0.4,0]}
           >
             <Mesh meshDatas={meshDatas2} /> 

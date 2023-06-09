@@ -26,8 +26,8 @@ const Mesh = ({meshDatas}) => {
   const mesh = useGLTF(meshDatas.mesh_Url)
   const nodes = mesh.nodes
   const RedMat = new THREE.MeshStandardMaterial({ 
-    color: new THREE.Color( "#ffffff"),
-    emissive: new THREE.Color("#000000"),
+    color: new THREE.Color( "#f5ac84"),
+    emissive: new THREE.Color("#242405"),
     roughness: 0.2,
     metalness: 1,
   });
